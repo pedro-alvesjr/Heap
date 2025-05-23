@@ -14,6 +14,10 @@ class MaxHeap:
     def _swap(self, index1, index2):
         self.heap[index1], self.heap[index2] = self.heap[index2], self.heap[index1]
 
+    def print_heap(self):
+        for i in self.heap:
+            print(i)
+
     def insert(self, value):
         self.heap.append(value)
         current = len(self.heap) - 1
@@ -54,3 +58,20 @@ class MaxHeap:
         
         return max_value
     
+# Testing the methods:
+
+my_heap = MaxHeap()
+my_heap.insert(0)
+my_heap.insert(1)
+my_heap.insert(2)
+my_heap.insert(3)
+my_heap.insert(4)
+my_heap.insert(5)
+
+print('Heap after insert:')
+my_heap.print_heap()
+
+my_heap.remove()
+
+print('\nHeap after removing:')
+my_heap.print_heap()
